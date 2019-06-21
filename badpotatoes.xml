@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="badpotatoesbranch" default="all">
+  
+  
+  <property file="badpotatoes.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.12" value="${jdk.home.12}/bin"/>
+  <path id="jdk.classpath.12">
+    <fileset dir="${jdk.home.12}">
+      <include name="../jdk-12.0.1!/java.base"/>
+      <include name="../jdk-12.0.1!/java.compiler"/>
+      <include name="../jdk-12.0.1!/java.datatransfer"/>
+      <include name="../jdk-12.0.1!/java.desktop"/>
+      <include name="../jdk-12.0.1!/java.instrument"/>
+      <include name="../jdk-12.0.1!/java.logging"/>
+      <include name="../jdk-12.0.1!/java.management"/>
+      <include name="../jdk-12.0.1!/java.management.rmi"/>
+      <include name="../jdk-12.0.1!/java.naming"/>
+      <include name="../jdk-12.0.1!/java.net.http"/>
+      <include name="../jdk-12.0.1!/java.prefs"/>
+      <include name="../jdk-12.0.1!/java.rmi"/>
+      <include name="../jdk-12.0.1!/java.scripting"/>
+      <include name="../jdk-12.0.1!/java.se"/>
+      <include name="../jdk-12.0.1!/java.security.jgss"/>
+      <include name="../jdk-12.0.1!/java.security.sasl"/>
+      <include name="../jdk-12.0.1!/java.smartcardio"/>
+      <include name="../jdk-12.0.1!/java.sql"/>
+      <include name="../jdk-12.0.1!/java.sql.rowset"/>
+      <include name="../jdk-12.0.1!/java.transaction.xa"/>
+      <include name="../jdk-12.0.1!/java.xml"/>
+      <include name="../jdk-12.0.1!/java.xml.crypto"/>
+      <include name="../jdk-12.0.1!/jdk.accessibility"/>
+      <include name="../jdk-12.0.1!/jdk.aot"/>
+      <include name="../jdk-12.0.1!/jdk.attach"/>
+      <include name="../jdk-12.0.1!/jdk.charsets"/>
+      <include name="../jdk-12.0.1!/jdk.compiler"/>
+      <include name="../jdk-12.0.1!/jdk.crypto.cryptoki"/>
+      <include name="../jdk-12.0.1!/jdk.crypto.ec"/>
+      <include name="../jdk-12.0.1!/jdk.crypto.mscapi"/>
+      <include name="../jdk-12.0.1!/jdk.dynalink"/>
+      <include name="../jdk-12.0.1!/jdk.editpad"/>
+      <include name="../jdk-12.0.1!/jdk.hotspot.agent"/>
+      <include name="../jdk-12.0.1!/jdk.httpserver"/>
+      <include name="../jdk-12.0.1!/jdk.internal.ed"/>
+      <include name="../jdk-12.0.1!/jdk.internal.jvmstat"/>
+      <include name="../jdk-12.0.1!/jdk.internal.le"/>
+      <include name="../jdk-12.0.1!/jdk.internal.opt"/>
+      <include name="../jdk-12.0.1!/jdk.internal.vm.ci"/>
+      <include name="../jdk-12.0.1!/jdk.internal.vm.compiler"/>
+      <include name="../jdk-12.0.1!/jdk.internal.vm.compiler.management"/>
+      <include name="../jdk-12.0.1!/jdk.jartool"/>
+      <include name="../jdk-12.0.1!/jdk.javadoc"/>
+      <include name="../jdk-12.0.1!/jdk.jcmd"/>
+      <include name="../jdk-12.0.1!/jdk.jconsole"/>
+      <include name="../jdk-12.0.1!/jdk.jdeps"/>
+      <include name="../jdk-12.0.1!/jdk.jdi"/>
+      <include name="../jdk-12.0.1!/jdk.jdwp.agent"/>
+      <include name="../jdk-12.0.1!/jdk.jfr"/>
+      <include name="../jdk-12.0.1!/jdk.jlink"/>
+      <include name="../jdk-12.0.1!/jdk.jshell"/>
+      <include name="../jdk-12.0.1!/jdk.jsobject"/>
+      <include name="../jdk-12.0.1!/jdk.jstatd"/>
+      <include name="../jdk-12.0.1!/jdk.localedata"/>
+      <include name="../jdk-12.0.1!/jdk.management"/>
+      <include name="../jdk-12.0.1!/jdk.management.agent"/>
+      <include name="../jdk-12.0.1!/jdk.management.jfr"/>
+      <include name="../jdk-12.0.1!/jdk.naming.dns"/>
+      <include name="../jdk-12.0.1!/jdk.naming.rmi"/>
+      <include name="../jdk-12.0.1!/jdk.net"/>
+      <include name="../jdk-12.0.1!/jdk.pack"/>
+      <include name="../jdk-12.0.1!/jdk.rmic"/>
+      <include name="../jdk-12.0.1!/jdk.scripting.nashorn"/>
+      <include name="../jdk-12.0.1!/jdk.scripting.nashorn.shell"/>
+      <include name="../jdk-12.0.1!/jdk.sctp"/>
+      <include name="../jdk-12.0.1!/jdk.security.auth"/>
+      <include name="../jdk-12.0.1!/jdk.security.jgss"/>
+      <include name="../jdk-12.0.1!/jdk.unsupported"/>
+      <include name="../jdk-12.0.1!/jdk.unsupported.desktop"/>
+      <include name="../jdk-12.0.1!/jdk.xml.dom"/>
+      <include name="../jdk-12.0.1!/jdk.zipfs"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.12}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.12}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.12"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.simplegraphics.classpath">
+    <pathelement location="${basedir}/lib/simpleGFX/simplegraphics.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module badpotatoesbranch -->
+  
+  <dirname property="module.badpotatoesbranch.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.badpotatoesbranch" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.badpotatoesbranch" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.badpotatoesbranch" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.badpotatoesbranch" value="-encoding UTF-8 -source 12 -target 12 ${compiler.args}"/>
+  
+  <property name="badpotatoesbranch.output.dir" value="${module.badpotatoesbranch.basedir}/out/production/badpotatoesbranch"/>
+  <property name="badpotatoesbranch.testoutput.dir" value="${module.badpotatoesbranch.basedir}/out/test/badpotatoesbranch"/>
+  
+  <path id="badpotatoesbranch.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="badpotatoesbranch.module.production.classpath">
+    <path refid="${module.jdk.classpath.badpotatoesbranch}"/>
+    <path refid="library.simplegraphics.classpath"/>
+  </path>
+  
+  <path id="badpotatoesbranch.runtime.production.module.classpath">
+    <pathelement location="${badpotatoesbranch.output.dir}"/>
+    <path refid="library.simplegraphics.classpath"/>
+  </path>
+  
+  <path id="badpotatoesbranch.module.classpath">
+    <path refid="${module.jdk.classpath.badpotatoesbranch}"/>
+    <pathelement location="${badpotatoesbranch.output.dir}"/>
+    <path refid="library.simplegraphics.classpath"/>
+  </path>
+  
+  <path id="badpotatoesbranch.runtime.module.classpath">
+    <pathelement location="${badpotatoesbranch.testoutput.dir}"/>
+    <pathelement location="${badpotatoesbranch.output.dir}"/>
+    <path refid="library.simplegraphics.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.badpotatoesbranch">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.badpotatoesbranch">
+    <patternset refid="excluded.from.module.badpotatoesbranch"/>
+  </patternset>
+  
+  <path id="badpotatoesbranch.module.sourcepath">
+    <dirset dir="${module.badpotatoesbranch.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.badpotatoesbranch" depends="compile.module.badpotatoesbranch.production,compile.module.badpotatoesbranch.tests" description="Compile module badpotatoesbranch"/>
+  
+  <target name="compile.module.badpotatoesbranch.production" depends="register.custom.compilers" description="Compile module badpotatoesbranch; production classes">
+    <mkdir dir="${badpotatoesbranch.output.dir}"/>
+    <javac2 destdir="${badpotatoesbranch.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.badpotatoesbranch}/javac">
+      <compilerarg line="${compiler.args.badpotatoesbranch}"/>
+      <bootclasspath refid="badpotatoesbranch.module.bootclasspath"/>
+      <classpath refid="badpotatoesbranch.module.production.classpath"/>
+      <src refid="badpotatoesbranch.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.badpotatoesbranch"/>
+    </javac2>
+    
+    <copy todir="${badpotatoesbranch.output.dir}">
+      <fileset dir="${module.badpotatoesbranch.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.badpotatoesbranch.tests" depends="register.custom.compilers,compile.module.badpotatoesbranch.production" description="compile module badpotatoesbranch; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.badpotatoesbranch" description="cleanup module">
+    <delete dir="${badpotatoesbranch.output.dir}"/>
+    <delete dir="${badpotatoesbranch.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.badpotatoesbranch" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.badpotatoesbranch" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>
