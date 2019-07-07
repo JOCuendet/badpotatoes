@@ -168,8 +168,7 @@ public class Game {
     void start() throws InterruptedException {
 
 
-
-        Sound gameOverMusic = new Sound(".resources/sound/game_songs/gameover.mp3");
+        Sound gameOverMusic = new Sound(".resources/sound/game_songs/gameover.wav");
         Sound potatoAttack = new Sound(".resources/sound/game_soundFX/potatoattack.wav");
 
 

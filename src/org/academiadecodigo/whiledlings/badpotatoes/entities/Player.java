@@ -1,6 +1,7 @@
 package org.academiadecodigo.whiledlings.badpotatoes.entities;
 
 import org.academiadecodigo.whiledlings.badpotatoes.controls.DirectionType;
+import org.academiadecodigo.whiledlings.badpotatoes.sound.Sound;
 
 public class Player implements Moveable {
 
@@ -14,6 +15,7 @@ public class Player implements Moveable {
     private DirectionType oldDirection;
     private int maxHealth = 5; // 5 hits dead
     private int health;
+    private Sound shieldHitSound;
 
 
     public Player() {
@@ -27,7 +29,7 @@ public class Player implements Moveable {
 
         this.shield = new Shield();
         this.animation = new PlayerAnimations(this);
-
+        this.shieldHitSound = new Sound("~./resources/sound/game_soundFX/potatoattack.wav");
     }
 
     public Shield getShield() {
@@ -38,7 +40,7 @@ public class Player implements Moveable {
         return moveSpeed;
     }
 
-    public int getMaxHealth() {
+    int getMaxHealth() {
         return maxHealth;
     }
 
@@ -46,11 +48,11 @@ public class Player implements Moveable {
         return animation;
     }
 
-    public int getX() {
+    int getX() {
         return X;
     }
 
-    public int getY() {
+    int getY() {
         return Y;
     }
 
@@ -103,10 +105,12 @@ public class Player implements Moveable {
     }
 
 
-    public void getHit() {
+    void getHit() {
         if (!shield.isShieldUp()) {
             health--;
+            return;
         }
+        shieldHitSound.play(true);
     }
 
     public int getHealth() {
