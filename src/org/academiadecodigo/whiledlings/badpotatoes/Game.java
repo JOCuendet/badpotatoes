@@ -71,7 +71,7 @@ public class Game {
 
     }
 
-    public void init() {
+    void init() {
 
         String bgpath = "./resources/ui&background/backgrounds/backgroundLarger.png";
         this.newBgPictureLevel1 = new Picture(PADDING, PADDING, bgpath);
@@ -165,7 +165,7 @@ public class Game {
         loadMenu();
     }
 
-    public void start() throws InterruptedException {
+    void start() throws InterruptedException {
 
 
 
@@ -175,8 +175,8 @@ public class Game {
 
         while (player.getHealth() > 0) {
 
-            if (menuDrawn == true) {
-                System.out.println(""); // TODO: 17/06/2019  WHAT THE FUCK!?!??!!??!??!?!?!??!
+            if (menuDrawn) {
+                System.out.flush();
                 continue;
             }
 
