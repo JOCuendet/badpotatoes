@@ -6,25 +6,26 @@ This project was developed by a team of four people in ten days' time, for the f
 ## Features
 
 ## Deployment
-'ant build' the project (with the supplied build.xml)
-Run the -jar file on the terminal and follow onScreen instructions.
+- 'ant build' the project (with the supplied build.xml)
+- Run the -jar file on the terminal and follow onScreen instructions.
 
 ## Usage
-This project is meant to run on the computer that will act as the main server to host the game.
-Once you run the server file on the computer it will ask for an IP and a Port Number.
-The players should connect to the server with 'netcat <Server IPaddress><Server Port>'.
+Run the -jar file from your machine and you should be good to go.
 
 ## Game rules
+Survive and kill all the potatoes.
 
 ## How-to play
-
+- Use the keys to move forward or backwards.
+- Press 'e' to atack the enemies in front of you.
+- You can press 'space' to use your shield to block the enemy and propel it to a safe distance in front of you.
 
 ### keybind
 ![keys](resources/docs.screenshots/keys.png?raw=true "keys")
 
-
 ## ScreenShots
-
+![prntscrn_1](resources/docs.screenshots/1.png?raw=true "keys")
+![prntscrn_1](resources/docs.screenshots/1.png?raw=true "keys")
 
 ## Credits
 #### Jonathan Cuendet
