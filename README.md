@@ -1,4 +1,4 @@
-![logo](resources/docs/screenshots/LogoBADPotatoes.png?raw=true "Logo")
+![logo](resources/docs.screenshots/LogoBADPotatoes.png?raw=true "Logo")
 
 # BADpotatoes
 This project was developed by a team of four people in ten days' time, for the first round of group projects @ <Academia de Codigo_>'s Bootcamp#29, taking place by the end of the 5th week of code learning as an introduction to Java simpleGFX and Threads handling.
@@ -20,7 +20,7 @@ The players should connect to the server with 'netcat <Server IPaddress><Server 
 
 
 ### keybind
-![keys](resources/docs/screenshots/keys.png?raw=true "keys")
+![keys](resources/docs.screenshots/keys.png?raw=true "keys")
 
 
 ## ScreenShots
