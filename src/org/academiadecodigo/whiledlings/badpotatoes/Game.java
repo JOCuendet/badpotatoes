@@ -11,9 +11,9 @@ import org.academiadecodigo.simplegraphics.mouse.Mouse;
 import org.academiadecodigo.simplegraphics.mouse.MouseEventType;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.whiledlings.badpotatoes.controls.*;
-import org.academiadecodigo.whiledlings.badpotatoes.entities.Batata;
 import org.academiadecodigo.whiledlings.badpotatoes.entities.EnemyFactory;
 import org.academiadecodigo.whiledlings.badpotatoes.entities.Player;
+import org.academiadecodigo.whiledlings.badpotatoes.entities.Potato;
 import org.academiadecodigo.whiledlings.badpotatoes.sound.Sound;
 import org.academiadecodigo.whiledlings.badpotatoes.worldelements.Terrain;
 import org.academiadecodigo.whiledlings.badpotatoes.worldelements.TerrainFactory;
@@ -30,7 +30,7 @@ public class Game {
     private Rectangle newBg;
     private Picture newBgPictureLevel1;
     private Picture floor;
-    private Batata[] level1;
+    private Potato[] level1;
     private int killCount = 0;
     private Text enemiesKilled;
     private Text victoryText;
@@ -251,16 +251,16 @@ public class Game {
 
             }
 
-            for (Batata batatinha : level1) {
-                if (batatinha.hitPlayer()) {
+            for (Potato potato : level1) {
+                if (potato.hitPlayer()) {
                     potatoAttack.play(false);
                     player.getAnimation().hurtAnimation();
-                    batatinha.recoil();
+                    potato.recoil();
                 }
-                if (!batatinha.hitPlayer()) {
-                    if (!batatinha.isDead()) {
-                        batatinha.move(player.getDirection(), player.getMoveSpeed());// MOVEMENT!
-                        batatinha.moveAuto();
+                if (!potato.hitPlayer()) {
+                    if (!potato.isDead()) {
+                        potato.move(player.getDirection(), player.getMoveSpeed());// MOVEMENT!
+                        potato.moveAuto();
                     }
 
                 }
@@ -269,25 +269,25 @@ public class Game {
 
             player.getAnimation().drawLifeBar();
 
-            for (Batata batatinha : level1) { // GARBAGE COLLECTOR
-                if (batatinha.isDead()) {
+            for (Potato potato : level1) { // GARBAGE COLLECTOR
+                if (potato.isDead()) {
 
-                    if (batatinha.getDeadTimer() > 20) {
+                    if (potato.getDeadTimer() > 20) {
 
-                        batatinha.removeCorpse();
+                        potato.removeCorpse();
                     }
-                    batatinha.incrementDeadTimer();
+                    potato.incrementDeadTimer();
                 }
 
             }
 
             //syringe.move(DirectionType.LEFT, newBg);
 
-            for (Batata batatinha : level1) {
-                if (batatinha.isDead()) {
-                    if (!batatinha.isCounted()) {
+            for (Potato potato : level1) {
+                if (potato.isDead()) {
+                    if (!potato.isCounted()) {
                         killCount++;
-                        batatinha.setCounted();
+                        potato.setCounted();
                         enemiesKilled.setText("" + killCount);
                     }
                 }

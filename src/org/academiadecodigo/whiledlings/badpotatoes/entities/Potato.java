@@ -5,7 +5,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.whiledlings.badpotatoes.Utility;
 import org.academiadecodigo.whiledlings.badpotatoes.controls.DirectionType;
 
-public class Batata extends Enemy implements Moveable {
+public class Potato extends Enemy implements Moveable {
 
     private final Player player;
     private final int movementSpeed;
@@ -22,7 +22,7 @@ public class Batata extends Enemy implements Moveable {
     private int deadTimer = 0;
     private boolean counted;
 
-    public Batata(int x, int y, Rectangle newBg, int movementSpeed, Player player) {
+    public Potato(int x, int y, Rectangle newBg, int movementSpeed, Player player) {
 
         super(x, y);
         this.counted = false;

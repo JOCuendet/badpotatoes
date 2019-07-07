@@ -134,13 +134,13 @@ public class Player implements Moveable {
         System.out.println("Player hp3: " + health);
     }
 
-    public void attack(Batata[] batatas) {
+    public void attack(Potato[] potatoes) {
 
-        for (Batata batata : batatas) {
-            if (!batata.isDead()) {
-                if ((batata.getPictureX() > (getX() + 60)) &&
-                        (batata.getPictureX() < (getX() + 90))) {
-                    batata.hit();
+        for (Potato potato : potatoes) {
+            if (!potato.isDead()) {
+                if ((potato.getPictureX() > (getX() + 60)) &&
+                        (potato.getPictureX() < (getX() + 90))) {
+                    potato.hit();
                 }
             }
         }
