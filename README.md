@@ -1,6 +1,6 @@
+# BADpotatoes
 ![logo](resources/docs.screenshots/LogoBADPotatoes.png?raw=true "Logo")
 
-# BADpotatoes
 This project was developed by a team of four people in ten days' time, for the first round of group projects @ <Academia de Codigo_>'s Bootcamp#29, taking place by the end of the 5th week of code learning as an introduction to Java simpleGFX and Threads handling.
 
 ## Features
