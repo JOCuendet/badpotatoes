@@ -24,8 +24,8 @@ Survive and kill all the potatoes.
 ![keys](resources/docs.screenshots/keys.png?raw=true "keys")
 
 ## ScreenShots
-![prntscrn_1](resources/docs.screenshots/1.png?raw=true "keys")
-![prntscrn_1](resources/docs.screenshots/1.png?raw=true "keys")
+![prntscrn_1](resources/docs.screenshots/1.png?raw=true "prntscrn_1")
+![prntscrn_2](resources/docs.screenshots/2.png?raw=true "prntscrn_2")
 
 ## Credits
 #### Jonathan Cuendet
