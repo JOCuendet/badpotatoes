@@ -22,9 +22,9 @@ Run the -jar file on the terminal and follow onScreen instructions.
 - Survive and kill all the potatoes.
 
 ## How-to play
-- Use the keys to move forward or backwards.
-- Press $`e` to attack the enemies in front of you.
-- You can press $`space` to use your shield to block the enemy and propel it to a safe distance in front of you.
+- Use the keys `a` / `d` to move backwards or forward.
+- Press `e` to attack the enemies in front of you.
+- You can press `space` to use your shield to block the enemy and propel it to a safe distance in front of you.
 
 ### keybind
 ![keys](resources/docs.screenshots/keys.png?raw=true "keys")
@@ -38,4 +38,3 @@ Run the -jar file on the terminal and follow onScreen instructions.
 - [Fernando Abreu](https://github.com/fernnandio)
 - [Ricardo Magalhães](https://github.com/summer9604)
 - [João Sanches](https://github.com/JayTurtle7)
-
