@@ -9,14 +9,14 @@ This project was developed by a team of four people in ten days' time, for the f
 - Difficulty is randomized by the speed they have and the distance that the enemies spawn on your play through.
 
 ## Build
-`$ Ant build` the project (with the supplied build.xml)
+`$ Ant jarfile` the project (with the supplied build.xml)
 
-Run the -jar file on the terminal and follow onScreen instructions.
-
-`$ java -jar BADpotatoes.jar`
+note: Ant command must be run with jdk8
 
 ## Usage
-- Run the -jar file from your machine and you should be good to go.
+Run the -jar file on the terminal and follow onScreen instructions.
+
+`$ java -jar build/BADpotatoes.jar`
 
 ## Game rules
 - Survive and kill all the potatoes.
